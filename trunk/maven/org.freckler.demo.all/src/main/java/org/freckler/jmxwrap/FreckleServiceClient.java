@@ -22,8 +22,8 @@ import javax.management.remote.JMXConnectorFactory;
 import javax.management.remote.JMXServiceURL;
 import org.cogchar.freckler.protocol.FreckleQuery;
 import org.cogchar.freckler.protocol.FreckleResult;
+import org.cogchar.integroid.jmxwrap.JMXUtils;
 import org.cogchar.platform.util.TimeUtils;
-import org.freckler.extra.JMXUtils;
 
 /**
  *
