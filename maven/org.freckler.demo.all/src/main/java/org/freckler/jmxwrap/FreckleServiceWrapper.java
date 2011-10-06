@@ -21,13 +21,13 @@ import org.freckler.gui.browse.FriendBrowserPanel;
 import org.freckler.gui.photo.MultiPhotoPanel;
 import org.cogchar.freckler.protocol.FreckleQuery;
 import org.cogchar.freckler.protocol.FreckleResult;
+import org.cogchar.integroid.jmxwrap.NotifyingBeanImpl;
 import org.cogchar.nwrap.facerec.FaceProfileManager;
 import org.cogchar.nwrap.facerec.FaceRecPopulationManager;
 import org.cogchar.platform.util.StringUtils;
 import org.cogchar.platform.util.TimeUtils;
 import org.cogchar.vision.PortableImage;
 import org.freckler.extra.FreckbaseFacade;
-import org.freckler.extra.NotifyingBeanImpl;
 
 
 /**
