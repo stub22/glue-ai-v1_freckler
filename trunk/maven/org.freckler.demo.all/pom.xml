@@ -4,7 +4,7 @@
 
   <groupId>org.freckler</groupId>
   <artifactId>org.freckler.demo.all</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>org.freckler.demo.all</name>
@@ -24,7 +24,7 @@
     <dependency>
       <groupId>org.cogchar</groupId>
       <artifactId>org.cogchar.lib.core</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0.3-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </project>

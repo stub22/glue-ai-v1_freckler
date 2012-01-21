@@ -5,15 +5,15 @@
 
 package org.freckler.jmxwrap;
 
-import org.cogchar.freckler.protocol.FreckleQuery;
-import org.cogchar.freckler.protocol.FreckleResult;
+import org.cogchar.api.freckler.protocol.FreckleQuery;
+import org.cogchar.api.freckler.protocol.FreckleResult;
 
 /**
  *
  * @author Stu Baurmann
  */
 public interface FreckleServiceWrapperMXBean  {
-	public static String	FRECKLER_JMX_OBJNAME = "com.hansonrobotics:freckler=jovial";
+	public static String	FRECKLER_JMX_OBJNAME = "org.freckler:server=europa";
 
 	public static final String	ATTRIB_FRECKLE_RESULT = "queryResult";
 
