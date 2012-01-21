@@ -8,12 +8,12 @@ package org.freckler.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
-import org.cogchar.animoid.config.FreckleMatchConfig;
-import org.cogchar.freckler.protocol.FreckleQuery;
-import org.cogchar.freckler.protocol.FreckleResult;
+import org.cogchar.api.freckler.protocol.FreckleMatchConfig;
+import org.cogchar.api.freckler.protocol.FreckleQuery;
+import org.cogchar.api.freckler.protocol.FreckleResult;
 import org.cogchar.nwrap.facerec.FaceRecPopulationManager;
-import org.cogchar.vision.OpenCVImage;
-import org.cogchar.vision.PortableImage;
+import org.cogchar.sight.vision.OpenCVImage;
+import org.cogchar.sight.vision.PortableImage;
 
 /**
  *
