@@ -53,7 +53,7 @@
 	
 	
 	<modules>	
-	
+		<module>../org.freckler.demo.all</module>
 	</modules>
 	
 	<!-- This single bundle-launch profile is available to all subprojects. 
