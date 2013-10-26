@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<!--
+	
+	This project is used only for releasing to Maven central.
+	It's purpose is to include all our source directories in the folder which gets 
+	tagged by release:prepare and checked-out+built+delivered by release:perform.
+	
+	Using Sonatype parent as described here:
+		https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-7a.1.POMandsettingsconfig
+		
+	Their pom.xml file is viewable here:
+	
+	http://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+	-->
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>	
+	
+<!--
+http://stackoverflow.com/questions/3684664/maven-property-substitution-not-done-for-project-version-tag-of-pom/3685248#3685248
+
+hard code the version in the top project/version element.
+hard code the version in the project/parent/version element of children.
+children inherit the version unless they want to override it
+use ${project.groupId} and ${project.version} for inter module dependencies.	
+
+Version-less parent will be allowed in Maven 3.1.
+-->
+	<groupId>org.freckler</groupId>
+	<artifactId>org.freckler.project.root</artifactId>
+	<version>1.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>${project.artifactId} - Root pom, linked to Sonatype repo parent</name>
+	<description>Project Root Folder pom.xml - includes all code + doc directories when snapped.</description>
+	<url>http://www.headyspace.org</url>
+	<!-- 2008 is when our Java/OpenCV coding efforts began, under various names. -->
+	<inceptionYear>2008</inceptionYear>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.freckler.org/license.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>	
+	<modules>
+		<!-- We list only "main", not "all", because we don't want to deploy "all" to Sonatype,
+			 but we do need to deploy this root pom.xml file (because subprojects depend on it).
+		-->
+		<module>maven/org.freckler.modules.main</module>
+		<!--
+		<module>maven/org.freckler.nbui.render</module>
+		-->
+  </modules>
+	<properties>
+		<jmonkey.version>3.0.0.20121220-SNAPSHOT</jmonkey.version>
+		<appdapter.msg.version>1.0.5</appdapter.msg.version>
+		<appdapter.version>1.1.2</appdapter.version>
+		<cogchar.version>1.0.7.0-SNAPSHOT</cogchar.version>
+		<!--
+		Freckler will probably want to pick up TinkerBot camera/vision APIs.
+		<robokind.version>0.9.2</robokind.version>
+		<jflux.version>0.1.6</jflux.version>
+		-->
+		<scala.version>2.10.2</scala.version>
+		<netbeans.version>RELEASE721</netbeans.version>
+				
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<encoding>UTF-8</encoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<netbeans.hint.license>freckler-apache20</netbeans.hint.license>		
+	</properties>
+	
+<!--
+	connection - used for read access to Maven (e.g. for svn-update)
+	developerConnection - requires a write-access connection (e.g. for svn-commit)
+	url - human-browsable view of SVN
+-->
+	
+	<scm>
+		<connection>scm:svn:https://subversion.assembla.com/svn/freckler/trunk/</connection>
+		<developerConnection>scm:svn:https://subversion.assembla.com/svn/freckler/trunk/</developerConnection>
+		<url>https://www.assembla.com/code/freckler/subversion/nodes/trunk/</url>
+	</scm>
+	<build>
+		
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<configuration>
+						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<!-- New in plugin version 2.2, but does not work correctly yet.
+						See:   https://jira.codehaus.org/browse/MRELEASE-695
+						<tagNameFormat>v@{project.version}</tagNameFormat>
+						 -->
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.scala-tools</groupId>
+					<artifactId>maven-scala-plugin</artifactId>
+					<configuration>
+		<!-- On Frogbait this option drops Scala proj build time about 20% -->
+						<jvmArgs>
+							<jvmArg>-XX:+TieredCompilation</jvmArg>
+						</jvmArgs>
+						<displayCmd>true</displayCmd>
+							<!-- Compile ONLY the Scala code.  The Java code is compiled by a previous goal.
+								This works OK as long as we don't refer to Scala classes from Java (in this
+								project).  Other projects can of course call our Scala classes like Java.
+								"Test Packages" of Java can also see Scala within the same project.
+								
+								This goes a little faster.  More issues are discussed in org.appdapter.lib.core pom.xml.
+							-->						 
+						<sendJavaToScalac>false</sendJavaToScalac>
+						<configuration>
+							<args>
+								<arg>-make:transitive</arg>
+								<arg>-dependencyfile</arg>
+								<arg>${project.build.directory}/.scala_dependencies</arg>
+							</args>						
+						</configuration>						
+					</configuration>
+				</plugin>				
+			</plugins>
+		</pluginManagement>
+		<plugins>
+
+		</plugins>
+	</build>
+</project>
