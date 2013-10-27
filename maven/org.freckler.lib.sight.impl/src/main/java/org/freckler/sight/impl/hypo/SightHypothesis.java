@@ -17,11 +17,15 @@
 
 package org.freckler.sight.impl.hypo;
 
-import org.friendularity.sight.api.core.SightExposureStatus;
-import org.freckler.sight.impl.obs.SightObservationLog;
-import org.friendularity.sight.api.core.SightObservation;
 import java.util.List;
-import org.friendularity.sight.api.freckle.FaceNoticeConfig;
+
+import org.cogchar.sight.api.core.SightExposureStatus;
+
+import org.cogchar.sight.api.core.SightObservation;
+import org.cogchar.sight.api.facerec.FaceNoticeConfig;
+import org.freckler.sight.impl.obs.SightObservationLog;
+
+
 import org.cogchar.api.animoid.protocol.EgocentricDirection;
 import org.cogchar.platform.util.CollectionUtils;
 import org.slf4j.Logger;

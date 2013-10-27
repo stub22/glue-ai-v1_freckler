@@ -18,7 +18,7 @@ package org.freckler.sight.track;
 
 import org.cogchar.api.integroid.cue.SightCue;
 import org.freckler.sight.impl.hypo.SightHypothesis;
-import org.friendularity.sight.api.core.SightObservation;
+import org.cogchar.sight.api.core.SightObservation;
 import java.util.HashSet;
 import java.util.Set;
 import org.slf4j.Logger;

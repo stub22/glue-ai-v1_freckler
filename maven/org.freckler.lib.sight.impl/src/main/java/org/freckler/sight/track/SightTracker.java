@@ -18,14 +18,17 @@ package org.freckler.sight.track;
 
 import org.cogchar.api.integroid.cue.SightAttentionStatus;
 import org.cogchar.api.integroid.cue.SightCue;
-import org.friendularity.sight.api.core.SightExposureStatus;
-import org.freckler.sight.impl.hypo.SightHypothesis;
-import org.freckler.sight.impl.hypo.SightModel;
-import org.friendularity.sight.api.core.SightObservation;
+import org.cogchar.sight.api.core.SightExposureStatus;
+
+import org.cogchar.sight.api.core.SightObservation;
 import org.cogchar.api.animoid.config.bonus.AnimoidConfig;
 import org.cogchar.api.animoid.protocol.EgocentricDirection;
 import org.cogchar.zzz.platform.stub.CueBrokerStub;
 import org.cogchar.platform.util.TimeUtils;
+
+import org.freckler.sight.impl.hypo.SightHypothesis;
+import org.freckler.sight.impl.hypo.SightModel;
+
 
 /**
  * @param <SO>

@@ -17,8 +17,8 @@
 package org.cogchar.freckbase
 
 import java.sql.{Connection, DriverManager, Statement, PreparedStatement, ResultSet, Blob};
-import org.cogchar.api.freckler.protocol.{FreckleQuery, FreckleResult, FreckleSampleQuality};
-import org.cogchar.sight.vision.PortableImage;
+import org.cogchar.sight.api.facerec.{FreckleQuery, FreckleResult, FreckleSampleQuality};
+import org.cogchar.sight.api.obs.PortableImage;
 
 import java.util.logging.Logger;
 

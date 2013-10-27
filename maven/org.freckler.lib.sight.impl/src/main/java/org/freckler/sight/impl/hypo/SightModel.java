@@ -17,8 +17,8 @@
 
 package org.freckler.sight.impl.hypo;
 
-import org.friendularity.sight.api.core.SightExposureStatus;
-import org.friendularity.sight.api.core.SightObservation;
+import org.cogchar.sight.api.core.SightExposureStatus;
+import org.cogchar.sight.api.core.SightObservation;
 
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -32,10 +32,12 @@ import org.cogchar.animoid.broker.AnimoidCueSpaceStub;
 import org.cogchar.animoid.calc.estimate.PositionEstimator;
 // import org.cogchar.api.animoid.config.bonus.AnimoidConfig;
 // import org.cogchar.api.animoid.gaze.GazeJoint;
-import org.friendularity.sight.api.core.SightPort;
+import org.cogchar.sight.api.core.SightPort;
+import org.cogchar.sight.api.core.SightDirectionComputer;
+
 import org.cogchar.api.animoid.protocol.EgocentricDirection;
 import org.cogchar.api.animoid.protocol.Frame;
-import org.friendularity.sight.api.core.SightDirectionComputer;
+
 import org.cogchar.zzz.platform.stub.CueSpaceStub;
 import org.cogchar.platform.util.TimeUtils;
 import org.slf4j.Logger;

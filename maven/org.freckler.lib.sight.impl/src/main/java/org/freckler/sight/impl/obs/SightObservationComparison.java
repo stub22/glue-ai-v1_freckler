@@ -16,12 +16,12 @@
 
 package org.freckler.sight.impl.obs;
 
-import org.friendularity.sight.api.core.SightObservation;
-import org.freckler.sight.impl.hypo.SightHypothesis;
-import org.friendularity.sight.api.freckle.FaceNoticeConfig;
-import org.friendularity.sight.api.core.SightPort;
 import org.cogchar.api.animoid.protocol.EgocentricDirection;
 
+import org.cogchar.sight.api.core.SightObservation;
+import org.cogchar.sight.api.facerec.FaceNoticeConfig;
+import org.cogchar.sight.api.core.SightPort;
+import org.freckler.sight.impl.hypo.SightHypothesis;
 /**
  *
  * @author Stu B. <www.texpedient.com>
