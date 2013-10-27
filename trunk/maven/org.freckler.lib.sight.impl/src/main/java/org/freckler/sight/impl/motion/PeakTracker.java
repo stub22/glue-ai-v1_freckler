@@ -20,11 +20,13 @@ import org.freckler.sight.impl.hypo.SightModel;
 import org.freckler.sight.track.SightTrackingTarget;
 import java.awt.Point;
 // import org.cogchar.animoid.calc.estimate.GazeDirectionComputer;
-import org.friendularity.sight.api.core.SightPort;
+
 import org.cogchar.api.animoid.protocol.EgocentricDirection;
 import org.cogchar.api.animoid.protocol.Frame;
 import org.cogchar.api.integroid.cue.SightCue;
-import org.friendularity.sight.api.core.SightDirectionComputer;
+
+import org.cogchar.sight.api.core.SightPort;
+import org.cogchar.sight.api.core.SightDirectionComputer;
 
 /**
  *

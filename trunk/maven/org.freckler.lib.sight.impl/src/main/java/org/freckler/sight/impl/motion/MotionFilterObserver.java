@@ -12,7 +12,7 @@ import java.awt.Rectangle;
 import java.util.List;
 import java.util.logging.Logger;
 import org.freckler.sight.impl.motion.PeakTracker;
-import org.friendularity.sight.vision.ROIVisionObserver;
+import org.cogchar.sight.api.obs.ROIVisionObserver;
 
 /**
  * @author Stu B. <www.texpedient.com>

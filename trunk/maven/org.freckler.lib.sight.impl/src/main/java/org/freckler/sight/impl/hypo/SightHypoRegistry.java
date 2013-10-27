@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
 
-import org.friendularity.sight.api.core.SightPort;
+import org.cogchar.sight.api.core.SightPort;
 import org.cogchar.api.animoid.protocol.EgocentricDirection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

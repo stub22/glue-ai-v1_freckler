@@ -16,7 +16,7 @@
 package org.freckler.sight.impl.obs;
 
 import java.util.List;
-import org.friendularity.sight.api.core.SightObservation;
+import org.cogchar.sight.api.core.SightObservation;
 
 /**
  * Tracks observations, combining observations of the same target into a single

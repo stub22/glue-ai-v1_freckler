@@ -17,9 +17,11 @@
 
 package org.freckler.sight.impl.hypo;
 
-import org.friendularity.sight.api.core.SightPort;
+import org.cogchar.sight.api.core.SightPort;
+import org.cogchar.sight.api.core.SightObservation;
+
 import org.freckler.sight.impl.obs.SightObservationComparison;
-import org.friendularity.sight.api.core.SightObservation;
+
 
 
 /**

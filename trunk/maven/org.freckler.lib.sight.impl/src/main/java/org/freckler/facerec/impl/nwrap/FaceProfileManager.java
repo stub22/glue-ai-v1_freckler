@@ -17,7 +17,7 @@
 
 package org.freckler.facerec.impl.nwrap;
 
-import org.cogchar.sight.vision.OpenCVImage;
+import org.cogchar.sight.api.obs.OpenCVImage;
 import java.util.Collection;
 
 /**

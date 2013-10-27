@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 import org.cogchar.api.integroid.cue.SightCue;
-import org.friendularity.sight.api.core.AnimoidSightFacade;
+import org.freckler.sight.impl.hypo.AnimoidSightFacade;
 import static org.freckler.sight.impl.aware.AwarenessConstants.*;
 import org.freckler.sight.impl.motion.MotionCueBroker;
 

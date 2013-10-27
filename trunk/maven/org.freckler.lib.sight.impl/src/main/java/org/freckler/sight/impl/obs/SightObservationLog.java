@@ -16,7 +16,7 @@
 
 package org.freckler.sight.impl.obs;
 
-import org.friendularity.sight.api.core.SightObservation;
+import org.cogchar.sight.api.core.SightObservation;
 import org.freckler.sight.impl.hypo.SightHypothesis;
 
 import java.util.Collection;
@@ -28,9 +28,11 @@ import java.util.Set;
 import java.util.TreeMap;
 
 // import org.cogchar.animoid.calc.estimate.TargetObjectStateEstimate;
-import org.friendularity.sight.api.freckle.FaceNoticeConfig;
+import org.cogchar.sight.api.facerec.FaceNoticeConfig;
+import org.cogchar.sight.api.core.SightRelatedStateEstimate;
+
 import org.cogchar.api.animoid.protocol.EgocentricDirection;
-import org.friendularity.sight.api.core.SightRelatedStateEstimate;
+
 import org.cogchar.platform.util.CollectionFilter;
 import org.cogchar.platform.util.TimeUtils;
 import org.slf4j.Logger;
