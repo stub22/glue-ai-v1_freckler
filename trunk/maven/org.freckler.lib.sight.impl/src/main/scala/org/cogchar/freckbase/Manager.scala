@@ -31,10 +31,10 @@ import scala.slick.driver.H2Driver.Implicit._
 
 import java.sql.{Connection, DriverManager, Statement, PreparedStatement, ResultSet, Blob};
 
-import org.cogchar.nwrap.facerec.FaceRecPopulationManager;
+import org.freckler.facerec.impl.nwrap.FaceRecPopulationManager;
 
-import org.cogchar.api.freckler.protocol.{FreckleQuery, FreckleResult, FreckleSampleQuality};
-import org.cogchar.api.freckler.protocol.FreckleMatchConfig;
+import org.cogchar.sight.api.facerec.{FreckleQuery, FreckleResult, FreckleSampleQuality};
+import org.cogchar.sight.api.facerec.FreckleMatchConfig;
 import java.util.logging.Logger;
 
 /* This class provides a facade suitable for Scala 2.7 export to Java.

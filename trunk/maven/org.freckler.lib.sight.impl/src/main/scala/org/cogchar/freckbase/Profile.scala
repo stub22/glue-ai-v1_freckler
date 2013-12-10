@@ -29,9 +29,9 @@ import scala.slick.driver.H2Driver.{Table => ExTable}
 import scala.slick.driver.H2Driver.Implicit._
 
 
-import org.cogchar.sight.vision.PortableImage;
-import org.cogchar.sight.vision.OpenCVImage;
-import org.cogchar.nwrap.facerec.FaceRecPopulationManager;
+import org.cogchar.sight.api.obs.PortableImage;
+import org.cogchar.sight.api.obs.OpenCVImage;
+import org.freckler.facerec.impl.nwrap.FaceRecPopulationManager;
 
 import java.util.logging.Logger;
 
