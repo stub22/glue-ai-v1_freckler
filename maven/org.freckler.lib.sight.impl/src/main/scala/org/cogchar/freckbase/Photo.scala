@@ -19,8 +19,8 @@ package org.cogchar.freckbase;
 import java.sql.Blob;
 import javax.sql.rowset.serial.SerialBlob;
 
-import org.cogchar.sight.vision.PortableImage;
-import org.cogchar.sight.vision.OpenCVImage;
+import org.cogchar.sight.api.obs.PortableImage;
+import org.cogchar.sight.api.obs.OpenCVImage;
 
 import scala.slick.driver._
 import scala.slick.lifted._
