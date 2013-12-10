@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.freckler</groupId>
 		<artifactId>org.freckler.modules.main</artifactId>
-		<version>1.1.0-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../org.freckler.modules.main/pom.xml</relativePath>
 	</parent>		
 	<artifactId>org.freckler.demo.all</artifactId>
