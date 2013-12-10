@@ -53,7 +53,7 @@ object Hypotheses extends RecordTable[Tuples.Hypo, Hypothesis]("Hypothesis") {
 	}
 	def updateFields(hypo : PTypes.Hypo, friendID : Long) (implicit isp: Session) {
 		val hypoID : Long = hypo.myObjectIdent.get;
-		QueryUtils.updateValue(tableName, c_friendID.name, hypoID, friendID);
+		QueryUtils.updateValue(tableName, colName(c_friendID), hypoID, friendID);
 		hypo.myFriendID = Some(friendID);
 	}
 	def test(friendID : Option[Long])(implicit isp: Session) : Long = {

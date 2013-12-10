@@ -16,18 +16,21 @@ import java.util.logging.Logger;
 import javax.management.ObjectName;
 import javax.swing.JFrame;
 
-import org.cogchar.api.freckler.protocol.FreckleQuery;
-import org.cogchar.api.freckler.protocol.FreckleResult;
+
 import org.freckler.gui.browse.FriendBrowserImpl;
 import org.freckler.gui.browse.FriendBrowserPanel;
 import org.freckler.gui.photo.MultiPhotoPanel;
 import org.cogchar.integroid.jmxwrap.NotifyingBeanImpl;
-import org.cogchar.nwrap.facerec.FaceProfileManager;
-import org.cogchar.nwrap.facerec.FaceRecPopulationManager;
+
 import org.cogchar.platform.util.StringUtils;
 import org.cogchar.platform.util.TimeUtils;
-import org.cogchar.sight.vision.PortableImage;
+import org.cogchar.sight.api.facerec.FreckleQuery;
+import org.cogchar.sight.api.facerec.FreckleResult;
+import org.cogchar.sight.api.obs.PortableImage;
+
 import org.freckler.extra.FreckbaseFacade;
+import org.freckler.facerec.impl.nwrap.FaceProfileManager;
+import org.freckler.facerec.impl.nwrap.FaceRecPopulationManager;
 
 
 /**

@@ -54,8 +54,9 @@
 				<executions>
 					<execution>
 						<goals>
+	
 							<goal>compile</goal>
-						
+	
 							<!-- We're not actually using any scala tests right now
 							<goal>testCompile</goal>
 Stu:  When I try to activate "testCompile" I get:

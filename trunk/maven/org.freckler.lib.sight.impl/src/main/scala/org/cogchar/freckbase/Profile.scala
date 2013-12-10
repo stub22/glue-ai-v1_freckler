@@ -112,8 +112,16 @@ object Profiles extends RecordTable[Tuples.Profile, Profile]("Profile") {
 	def forLegacyFreckleID(legacyFreckID : String)(implicit isp: Session) : PTypes.Profile = {
 		val q = this where {_.c_legacyFreckleID is legacyFreckID};
 		myLogger.info("Query by legacyFreckleID: " + q.selectStatement);
+		/* Fixme
+org/cogchar/freckbase/Profile.scala:115: error: type mismatch;
+ found   : scala.slick.lifted.NothingContainer#TableNothing
+ required: (Long, Long, Long, String)
+		
+		
 		val tup : Tuples.Profile = q.first;
 		bindTuple(tup);
+		*/
+	   null;
 	}
 	def build(legacyFreckID: String, obsList : List[PTypes.Obs])(implicit isp: Session) : Long = {
 		val profileID : Long = Profiles.insert(legacyFreckID);

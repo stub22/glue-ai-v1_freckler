@@ -5,7 +5,7 @@
 
 package org.freckler.service;
 
-import org.cogchar.api.freckler.protocol.FreckleResult;
+import org.cogchar.sight.api.facerec.FreckleResult;
 
 /**
  *

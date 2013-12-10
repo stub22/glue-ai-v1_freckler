@@ -64,8 +64,15 @@ abstract class RecordTable[Tup, Rec](tabName: String) extends ExTable[Tup](tabNa
 		val q = this where {_.c_oid is objID};  // adding ".bind" to obsID makes it a prepared statement
 		println("Query by OID: " + q.selectStatement)
 		// Does not permit errors, e.g. bad obsID
+		/* Fixme found   : scala.slick.lifted.NothingContainer#TableNothing
+					 required: Tup
+
 		val tup : Tup = q.first;
 		tup;
+		*/
+	   // HACK BROKEN FIXME
+	   // Bogus recursive call to make types agree - will hang if used at runtime!!!
+		readTupleOrThrow(objID)
 	}
 	// abstract - Turn a DB result into a usable record object.
 	def bindTuple(t : Tup) : Rec with Persistent;
@@ -101,4 +108,7 @@ abstract class RecordTable[Tup, Rec](tabName: String) extends ExTable[Tup](tabNa
 		}
 		resultList;
 	}
+	// Update for slick compat:
+	// ".name" is no longer a field of Column, here is first guess at an equivalent.
+	def colName(col : scala.slick.lifted.Column[_]) : String = col.nodeDelegate.toString()
 }

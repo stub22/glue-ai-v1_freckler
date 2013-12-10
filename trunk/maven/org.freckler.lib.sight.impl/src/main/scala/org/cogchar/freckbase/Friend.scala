@@ -71,17 +71,24 @@ object Friends extends RecordTable[Tuples.Friend, Friend]("Friend") {
 	def updateFields(friend : PTypes.Friend, profileID : Option[Long], personName : Option[String]) (implicit isp: Session) {
 		val friendID : Long = friend.myObjectIdent.get;
 		if(profileID.isDefined) {
-			QueryUtils.updateValue(tableName, c_profileID.name, friendID, profileID.get);
+			QueryUtils.updateValue(tableName, colName(c_profileID), friendID, profileID.get);
 		}
 		if(personName.isDefined) {
-			QueryUtils.updateValue(tableName, c_personName.name, friendID, personName.get);
+			QueryUtils.updateValue(tableName, colName(c_personName), friendID, personName.get);
 		}
 	}
 	def forProfileID(profileID : Long)(implicit isp: Session)  : Option[PTypes.Friend] = {
 		val q = this where {_.c_profileID is profileID};  // adding ".bind" to obsID makes it a prepared statement
 		myLogger.info("Query by profileID: " + q.selectStatement);
+		/* FIXME
+org/cogchar/freckbase/Friend.scala:83: error: type mismatch;
+ found   : scala.slick.lifted.NothingContainer#TableNothing
+ required: (Long, Long, Long, Long, Long, Option[String])
+		val tup : Tuples.Friend = q.first;
 		val tup : Tuples.Friend = q.first;
 		Some(bindTuple(tup));
+*/
+		None
 		// TODO : Handle query failure and map to None.
 	}
 

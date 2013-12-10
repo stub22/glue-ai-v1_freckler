@@ -5,7 +5,7 @@
 
 package org.freckler.service;
 
-import org.cogchar.sight.vision.PortableImage;
+import org.cogchar.sight.api.obs.PortableImage;
 
 /**
  *
