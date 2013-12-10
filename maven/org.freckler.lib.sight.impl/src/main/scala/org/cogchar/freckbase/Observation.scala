@@ -76,12 +76,12 @@ object Observations extends RecordTable[Tuples.Obs, Observation]("Observation") 
 
 		// TODO:  Looks like we are not writing the hypoID yet!
 		val obsID : Long = obs.myObjectIdent.get; // OrElse{throw new RuntimeException("No obs ID")};
-		QueryUtils.updateValue(tableName, c_recogStatus.name, obsID, recogStatus);
+		QueryUtils.updateValue(tableName, colName(c_recogStatus), obsID, recogStatus);
 		if(qPacket.isDefined) {
-			QueryUtils.updateValue(tableName, c_qualityPacket.name, obsID, qPacket.get);
+			QueryUtils.updateValue(tableName, colName(c_qualityPacket), obsID, qPacket.get);
 		}
 		if(friendID.isDefined) {
-			QueryUtils.updateValue(tableName, c_friendID.name, obsID, friendID.get);
+			QueryUtils.updateValue(tableName, colName(c_friendID), obsID, friendID.get);
 		}
 		obs.myRecogStatus = recogStatus;
 		obs.myQualityPacket = qPacket;

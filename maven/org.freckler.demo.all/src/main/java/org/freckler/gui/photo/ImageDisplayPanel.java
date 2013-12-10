@@ -10,7 +10,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.cogchar.sight.vision.PortableImage;
+import org.cogchar.sight.api.obs.PortableImage;
 
 /**
  *

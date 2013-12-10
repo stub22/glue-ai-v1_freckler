@@ -17,9 +17,14 @@
 
 		<dependency>
 			<groupId>org.cogchar</groupId>
-			<artifactId>org.cogchar.lib.core</artifactId>
+			<artifactId>org.cogchar.bundle.core</artifactId>
 			<version>${cogchar.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>org.freckler.lib.sight.impl</artifactId>
+			<version>${project.version}</version>
+		</dependency>		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

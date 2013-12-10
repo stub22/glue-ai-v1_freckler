@@ -21,8 +21,7 @@ import org.cogchar.freckbase.Friend;
 import org.cogchar.freckbase.Manager;
 import org.cogchar.freckbase.Observation;
 import org.cogchar.freckbase.ProfileEntry;
-import org.cogchar.nwrap.facerec.FaceProfileManager;
-import org.cogchar.nwrap.facerec.FaceRecPopulationManager;
+
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -30,9 +29,13 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-import org.cogchar.api.freckler.protocol.FreckleQuery;
-import org.cogchar.api.freckler.protocol.FreckleResult;
-import org.cogchar.sight.vision.PortableImage;
+
+import org.cogchar.sight.api.facerec.FreckleQuery;
+import org.cogchar.sight.api.facerec.FreckleResult;
+import org.cogchar.sight.api.obs.PortableImage;
+
+import org.freckler.facerec.impl.nwrap.FaceProfileManager;
+import org.freckler.facerec.impl.nwrap.FaceRecPopulationManager;
 import scala.Option;
 
 /**

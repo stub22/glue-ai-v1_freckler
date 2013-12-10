@@ -20,10 +20,11 @@ import javax.management.ObjectName;
 import javax.management.remote.JMXConnector;
 import javax.management.remote.JMXConnectorFactory;
 import javax.management.remote.JMXServiceURL;
-import org.cogchar.api.freckler.protocol.FreckleQuery;
-import org.cogchar.api.freckler.protocol.FreckleResult;
+
 import org.cogchar.integroid.jmxwrap.JMXUtils;
 import org.cogchar.platform.util.TimeUtils;
+import org.cogchar.sight.api.facerec.FreckleQuery;
+import org.cogchar.sight.api.facerec.FreckleResult;
 
 /**
  *

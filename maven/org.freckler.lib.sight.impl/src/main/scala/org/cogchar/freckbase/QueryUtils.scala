@@ -58,9 +58,14 @@ object QueryUtils {
 	*/
 	def updateValue[VT](table : String, column : String, oid : Long, v : VT)(implicit isp: Session) = {
 		val upText = "UPDATE " + table + " SET " + column + "=? WHERE object_id=?";
+		// FIXME:
+		// org/cogchar/freckbase/QueryUtils.scala:61: error: could not find implicit value for parameter pconv: 
+		// scala.slick.jdbc.SetParameter[(VT, Long)]
+/*		
 		val upper = update[(VT,Long)](upText);
 		val rowcount = upper((v,oid));
 		println("Update rowcount was " + rowcount + " for: " + upText + " with oid=" + oid + " and val=" + v);
+	*/
 	}
 	def deleteRow(table : String, oid : Long)(implicit isp: Session) = {
 		val delText = "DELETE FROM " + table + " WHERE object_id=?";

@@ -78,7 +78,7 @@ object TestSQ {
 		println("Recorded full obs with ID: " + fullObsID);
 		val rfo : PTypes.Obs = Observations.readOneOrThrow(fullObsID)(explicitSession);
 		println("Reconstituted full obs: " + rfo);
-		QueryUtils.updateValue(Observations.tableName, Observations.c_recogStatus.name, fullObsID, "FIXED")(explicitSession);
+		QueryUtils.updateValue(Observations.tableName, Observations.colName(Observations.c_recogStatus), fullObsID, "FIXED")(explicitSession);
 		//	fullObsID;
 	}
 }

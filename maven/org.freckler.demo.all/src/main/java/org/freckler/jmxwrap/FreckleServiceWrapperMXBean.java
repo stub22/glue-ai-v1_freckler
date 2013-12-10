@@ -5,8 +5,8 @@
 
 package org.freckler.jmxwrap;
 
-import org.cogchar.api.freckler.protocol.FreckleQuery;
-import org.cogchar.api.freckler.protocol.FreckleResult;
+import org.cogchar.sight.api.facerec.FreckleQuery;
+import org.cogchar.sight.api.facerec.FreckleResult;
 
 /**
  *
