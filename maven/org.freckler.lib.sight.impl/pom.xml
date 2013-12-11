@@ -10,7 +10,7 @@
 
   <artifactId>org.freckler.lib.sight.impl</artifactId>
 
-  <name>${artifactId} - POJOs and Scala</name>
+  <name>${project.artifactId} - POJOs and Scala</name>
 
   <dependencies>
     <dependency>
