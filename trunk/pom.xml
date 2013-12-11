@@ -57,12 +57,10 @@ Version-less parent will be allowed in Maven 3.1.
 		-->
   </modules>
 	<properties>
-		<jmonkey.version>3.0.0.20121220-SNAPSHOT</jmonkey.version>
-		<appdapter.msg.version>1.0.5</appdapter.msg.version>
-		<appdapter.version>1.1.2</appdapter.version>
-		<cogchar.version>1.0.7.1-SNAPSHOT</cogchar.version>
+
+		<cogchar.version>1.0.7.1</cogchar.version>
 		<!--
-		Freckler will probably want to pick up TinkerBot camera/vision APIs.
+		Freckler may eventually need to pick up TinkerBot camera/vision APIs.
 		<robokind.version>0.9.2</robokind.version>
 		<jflux.version>0.1.6</jflux.version>
 		-->
