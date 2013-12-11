@@ -27,28 +27,10 @@
 			<name>Spring EBR External Release Repository</name>
 			<url>http://repository.springsource.com/maven/bundles/external</url>
 		</repository>
-		<!--
-		<repository>
-			<id>scala-tools.org</id>
-			<name>Scala-Tools Maven2 Repository</name>
-			<url>http://scala-tools.org/repo-releases</url>
-		</repository>
-		<repository>
-			<id>scala-tools.org-SNAP</id>
-			<name>Scala-Tools Snapshots Repo</name>
-			<url>http://scala-tools.org/repo-snapshots/</url>
-		</repository>
-		-->
 	</repositories>
 
 	<pluginRepositories>
-		<!--
-		<pluginRepository>
-			<id>scala-tools.org</id>
-			<name>Scala-Tools Maven2 Repository</name>
-			<url>http://scala-tools.org/repo-releases</url>
-		</pluginRepository>
-		-->
+
 	</pluginRepositories>
 	
 	
@@ -70,13 +52,6 @@
 					<version>4.2.1</version>
 					<scope>provided</scope>
 				</dependency>
-                <!-- To include a shell:
-                <dependency>
-                    <groupId>org.apache.felix</groupId>
-                    <artifactId>org.apache.felix.gogo.shell</artifactId>
-                    <version>0.6.1</version>
-                </dependency>
-                -->
 			</dependencies>
 			<build>
 				<plugins>

@@ -10,7 +10,7 @@
 	<artifactId>org.freckler.demo.all</artifactId>
 	<packaging>jar</packaging>
 
-		<name>${artifactId} - Demo POJOs</name>
+		<name>${project.artifactId} - Demo POJOs</name>
   
 
 	<dependencies>

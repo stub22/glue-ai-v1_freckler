@@ -16,9 +16,9 @@
 
 package org.freckler.sight.track;
 
+import org.cogchar.api.animoid.gaze.IGazeTarget;
+import org.cogchar.api.animoid.gaze.IGazeTarget.Flavor;
 import org.cogchar.api.integroid.cue.SightCue;
-// import org.cogchar.animoid.gaze.IGazeTarget;
-// import org.cogchar.animoid.gaze.IGazeTarget.Flavor;
 import org.cogchar.api.animoid.protocol.Frame;
 
 /**
