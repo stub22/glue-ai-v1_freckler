@@ -6,7 +6,7 @@
 		<groupId>org.freckler</groupId>
 		<artifactId>org.freckler.project.root</artifactId>
 		<!-- Freckler starts with version 1.1.0 to match Cogchar at time of transition -->
-		<version>1.0.0</version>
+		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>  
 	
@@ -148,7 +148,15 @@
 									<entry key="org.osgi.framework.storage" value="${project.build.directory}${file.separator}felix-cache" />
 									<entry key="org.osgi.framework.bootdelegation" value="*" />
                                     <!-- org.w3c.dom.* are missing from default.properties in felix 4.2.1, they are present in 3.0.7 -->
-									<entry key="org.osgi.framework.system.packages.extra" value="sun.misc,                                                     org.w3c.dom.css,                                                     org.w3c.dom.html,                                                     org.w3c.dom.stylesheets,                                                     org.w3c.dom.traversal,                                                     org.w3c.dom.ranges,                                                     org.w3c.dom.views,                                                     org.w3c.dom.xpath" />
+									<entry key="org.osgi.framework.system.packages.extra" 
+                                           value="sun.misc,
+                                                    org.w3c.dom.css,
+                                                    org.w3c.dom.html,
+                                                    org.w3c.dom.stylesheets,
+                                                    org.w3c.dom.traversal,
+                                                    org.w3c.dom.ranges,
+                                                    org.w3c.dom.views,
+                                                    org.w3c.dom.xpath" />
 								</propertyfile>
 								<makeurl property="run.properties.url" file="${project.build.directory}/run.properties" />
 								<java fork="true" jar="${maven.dependency.org.apache.felix.org.apache.felix.main.jar.path}">
