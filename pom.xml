@@ -33,7 +33,7 @@ Version-less parent will be allowed in Maven 3.1.
 -->
 	<groupId>org.freckler</groupId>
 	<artifactId>org.freckler.project.root</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId} - Root pom, linked to Sonatype repo parent</name>
 	<description>Project Root Folder pom.xml - includes all code + doc directories when snapped.</description>
@@ -82,9 +82,9 @@ Version-less parent will be allowed in Maven 3.1.
 -->
 	
 	<scm>
-		<connection>scm:svn:https://subversion.assembla.com/svn/freckler/trunk/</connection>
-		<developerConnection>scm:svn:https://subversion.assembla.com/svn/freckler/trunk/</developerConnection>
-		<url>https://www.assembla.com/code/freckler/subversion/nodes/trunk/</url>
+		<connection>scm:svn:https://subversion.assembla.com/svn/freckler/tags/org.freckler.project.root-1.0.0</connection>
+		<developerConnection>scm:svn:https://subversion.assembla.com/svn/freckler/tags/org.freckler.project.root-1.0.0</developerConnection>
+		<url>https://www.assembla.com/code/freckler/subversion/nodes/tags/org.freckler.project.root-1.0.0</url>
 	</scm>
 	<build>
 		
