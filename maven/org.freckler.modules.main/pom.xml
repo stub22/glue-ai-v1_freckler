@@ -37,6 +37,7 @@
 	<modules>	
 		<module>../org.freckler.demo.all</module>
 		<module>../org.freckler.lib.sight.impl</module>
+		<module>../ext.bundle.opencv_v2_4_7</module>
 	</modules>
 	
 	<!-- This single bundle-launch profile is available to all subprojects. 
