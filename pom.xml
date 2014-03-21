@@ -58,7 +58,7 @@ Version-less parent will be allowed in Maven 3.1.
   </modules>
 	<properties>
 
-		<cogchar.version>1.0.8.0</cogchar.version>
+		<cogchar.version>1.0.8.1-SNAPSHOT</cogchar.version>
 		<!--
 		Freckler may eventually need to pick up TinkerBot camera/vision APIs.
 		<robokind.version>0.9.2</robokind.version>
