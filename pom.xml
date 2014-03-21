@@ -60,10 +60,10 @@ Version-less parent will be allowed in Maven 3.1.
 
 		<cogchar.version>1.0.8.1-SNAPSHOT</cogchar.version>
 		<!--
-		Freckler may eventually need to pick up TinkerBot camera/vision APIs.
-		<robokind.version>0.9.2</robokind.version>
+		Freckler may eventually need to pick up MechIO camera/vision APIs.
+		<mechio.version>0.9.2</mechio.version>
 		<jflux.version>0.1.6</jflux.version>
-		-->
+		-->	
 		<scala.version>2.10.2</scala.version>
 		<netbeans.version>RELEASE721</netbeans.version>
 				
